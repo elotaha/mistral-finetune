@@ -90,8 +90,12 @@ Topics covered: remote work, data classification, onboarding, GDPR, IT security,
 
 The quantitative improvements reflect a profound shift in the model's tone and domain alignment:
 
+![Interactive Inference Session](assets/inference.png)
+
 *   **Base Model (Wikipedia Style)**: Answers generally. E.g., for "What is the clean desk policy?", it defines what a clean desk policy is in the general world, outputting generic workplace advice.
 *   **Fine-Tuned Model (Corporate Style)**: Adopts an authoritative, internal tone. For the same question, it answers with the specific company directive: *"All desks must be cleared of personal items at the end of each day. Confidential documents must be shredded."*
+
+![Evaluation Comparison](assets/evaluation.png)
 
 Despite a very small dataset (~80 examples), the model successfully overrides its broad conversational training to align with a specific, internal corporate reality.
 
