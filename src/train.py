@@ -5,9 +5,13 @@ Usage:
     python src/train.py --epochs 5 --lr 1e-4
 """
 
+import os
 import json
 import argparse
 import logging
+
+# Set MLflow experiment name before initializing
+os.environ["MLFLOW_EXPERIMENT_NAME"] = "mistral-qlora-finetuning"
 
 # Configure professional logging
 logging.basicConfig(
@@ -118,7 +122,7 @@ def main():
         save_strategy="epoch",
         save_total_limit=2,
         fp16=False,
-        report_to="none",
+        report_to="mlflow",
         optim="paged_adamw_8bit",
         load_best_model_at_end=True,
         metric_for_best_model="eval_loss",
