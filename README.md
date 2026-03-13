@@ -79,6 +79,14 @@ Topics covered: remote work, data classification, onboarding, GDPR, IT security,
 | Hardware | Google Colab T4 (free tier) |
 | Training time | ~30 min |
 
+## MLOps & Experiment Tracking
+
+To ensure reproducibility and professional tracking of hyperparameters and metrics, the training loop is integrated with **MLflow**. 
+
+![MLflow Experiment Tracking](assets/mlflow.png)
+
+*The dashboard above captures the model's convergence across epochs. The steady decline in `eval_loss` alongside the increase in `eval_mean_token_accuracy` confirms the model is successfully learning the corporate domain without diverging, despite the small dataset.*
+
 ## Results
 
 | Metric | Base Model | Fine-Tuned | Δ |
